@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <Flex p="4" bg="pink.400" color="white" flexDirection="column" alignItems="center">
+    <Flex pt="10" bg="pink.400" color="white" flexDirection="column" alignItems="center" maxW="100%" minH="15vh">
       <Box>
         <Text>&copy; Sobrero Matias Eduardo</Text>
       </Box>

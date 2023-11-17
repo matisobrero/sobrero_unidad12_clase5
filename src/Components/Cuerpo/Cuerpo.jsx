@@ -1,5 +1,6 @@
-import { Box, Container, Text, Button } from '@chakra-ui/react'
+import { Box, Container, Text, Button, Flex } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { motion } from "framer-motion";
 
 function Cuerpo() {
 
@@ -17,30 +18,45 @@ function Cuerpo() {
 
 
   return (
-    <Container maxW="100%" minH="80vh" pt="8" bg="pink.50">
+    <Flex maxW="100%" minH="80vh" bg="pink.50" justifyContent="center" alignItems="center">
     <Box>
-      <Text fontSize="32px" textAlign="center" fontWeight="bold" mb="4">
+      <Text fontSize="48px" textAlign="center" fontWeight="bold" textDecorationLine="underline">
         Contador - Clase 5
       </Text>
 
-    <Box>
-    <Text fontSize="30px" textAlign="center" mt="100px" pb="1">
-        Resultado: {contador}
-      </Text>
+      <Box>
+        <Text fontSize="34px" textAlign="center" mt="120px" pb="1">
+          Resultado: {contador}
+        </Text>
+      </Box>
 
       <Box textAlign="center" mt="4">
-      
-      <Button onClick={incrementar} colorScheme="pink" size="lg" mr="4" mt="100px">
+        <Button
+          onClick={incrementar}
+          colorScheme="pink"
+          size="lg"
+          mr="4"
+          mt="50px"
+          _hover={{ transform: 'scale(1.1)' }} 
+          _active={{ transform: 'scale(0.9)' }}
+        >
           Incrementar
         </Button>
 
-        <Button onClick={decrementar} colorScheme="blue" size="lg" mt="100px" isDisabled={contador === 0}>
+        <Button
+          onClick={decrementar}
+          colorScheme="blue"
+          size="lg"
+          mt="50px"
+          isDisabled={contador === 0}
+          _hover={{ transform: 'scale(1.1)' }} 
+          _active={{ transform: 'scale(0.9)' }}
+        >
           Decrementar
         </Button>
       </Box>
-      </Box>
     </Box>
-  </Container>
+  </Flex>
 
   )
 }
