@@ -8,7 +8,7 @@ function Footer() {
         <Text>&copy; Sobrero Matias Eduardo</Text>
       </Box>
       <Box>
-        <Text>Argenmtina Programa 4.0 | React Js - Vite</Text>
+        <Text>Argentina Programa 4.0 | React Js - Vite</Text>
       </Box>
     </Flex>
     
